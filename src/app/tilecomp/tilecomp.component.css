@@ -1,0 +1,43 @@
+.tile{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    perspective: 200px;
+    transform-style: preserve-3d;
+    transition: 0.7s;
+}
+p{
+    transform: translateY(30%);
+
+}
+
+.tile .settings{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border: 1px solid silver;
+    border-radius: 7px;
+
+    backface-visibility: hidden;
+    transition: 0.7s;
+}
+
+.tile .FrontSide{
+    background-color:bisque;
+    color: #1b1515;
+    transform: rotateX(0deg);
+}
+
+.tile:hover .FrontSide{
+    transform: rotateX(-180deg);
+}
+
+.tile .BackSide{
+    background-color:black;
+    color: #c0c0c0;
+    transform: rotateX(180deg);
+}
+.tile:hover .BackSide{
+    transform: rotateX(0deg);
+}
